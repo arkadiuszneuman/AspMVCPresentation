@@ -1,0 +1,33 @@
+ meta
+ 
+ public ActionResult HelloName(string name)
+        {
+            ViewBag.Name = name;
+            return View();
+        }
+		
+================================================
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Witaj @ViewBag.Name</title>
+</head>
+<body>
+<div>
+      Witaj @ViewBag.Name
+</div>
+</body>
+</html>
+
+
+
+http://localhost:62168/Home/HelloName?name=Arek
+=================================================
+=============================================
+
