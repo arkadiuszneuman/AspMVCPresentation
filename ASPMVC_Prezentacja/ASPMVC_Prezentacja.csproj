@@ -146,6 +146,8 @@
   <ItemGroup>
     <None Include="Views\Home\HelloNameViewModel.cshtml" />
     <None Include="Views\Layout\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStartt.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

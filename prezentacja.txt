@@ -51,11 +51,11 @@ public ActionResult HelloNameViewModel(string firstname, string lastname)
 
 <html>
 <head>
-    <title>Witaj @Model.FirstName @Model.LastName</title>
+    <title>Witaj, @Model.FirstName @Model.LastName</title>
 </head>
 <body>
 <div>
-      Witaj @Model.FirstName @Model.LastName
+      Witaj, @Model.FirstName @Model.LastName
 </div>
 </body>
 </html>
@@ -65,3 +65,5 @@ http://localhost:62168/Home/HelloNameViewModel?firstname=Arek&lastname=Neuman
 
 =================================================
 =============================================
+
+
