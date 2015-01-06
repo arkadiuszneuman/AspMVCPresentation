@@ -66,4 +66,53 @@ http://localhost:62168/Home/HelloNameViewModel?firstname=Arek&lastname=Neuman
 =================================================
 =============================================
 
+public class PostController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult AcceptValue(NameViewModel nameViewModel)
+        {
+            return View("~/Views/Home/HelloNameViewModel.cshtml", nameViewModel);
+        }
+    }
+	
+======================
+
+@model ASPMVC_Prezentacja.ViewModels.NameViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Post</title>
+</head>
+<body>
+    @using (Html.BeginForm("AcceptValue", "Post", FormMethod.Post))
+    {
+        <p>
+            @Html.LabelFor(c => c.FirstName)
+            @Html.TextBoxFor(c => c.FirstName)
+        </p>
+    <p>
+        @Html.LabelFor(c => c.LastName)
+        @Html.TextBoxFor(c => c.LastName)
+    </p>
+    <p>
+        <input type="submit" value="Wyślij" />
+    </p>
+    }
+</body>
+</html>
+
+http://localhost:62168/Post
+
+===========================================================================
+===========================================================================
