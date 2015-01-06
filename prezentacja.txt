@@ -28,6 +28,40 @@
 
 
 http://localhost:62168/Home/HelloName?name=Arek
+
+http://localhost:62168/Home/HelloName/Arek
 =================================================
 =============================================
 
+public ActionResult HelloNameViewModel(string firstname, string lastname)
+        {
+            NameViewModel vrlNameViewModel = new NameViewModel
+            {
+                FirstName = firstname,
+                LastName = lastname
+            };
+
+            return View(vrlNameViewModel);
+        }
+
+=====================================================		
+		
+@model ASPMVC_Prezentacja.ViewModels.NameViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Witaj @Model.FirstName @Model.LastName</title>
+</head>
+<body>
+<div>
+      Witaj @Model.FirstName @Model.LastName
+</div>
+</body>
+</html>
+
+
+http://localhost:62168/Home/HelloNameViewModel?firstname=Arek&lastname=Neuman
+
+=================================================
+=============================================

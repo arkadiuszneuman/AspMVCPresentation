@@ -109,10 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -140,6 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\HelloName.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Home\HelloNameViewModel.cshtml" />
+    <None Include="Views\Layout\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ASPMVC_Prezentacja.ViewModels;
 
 namespace ASPMVC_Prezentacja.Controllers
 {
@@ -13,10 +14,21 @@ namespace ASPMVC_Prezentacja.Controllers
             return View();
         }
 
-        public ActionResult HelloName(string name)
+        public ActionResult HelloName(string id)
         {
-            ViewBag.Name = name;
+            ViewBag.Name = id;
             return View();
+        }
+
+        public ActionResult HelloNameViewModel(string firstname, string lastname)
+        {
+            NameViewModel vrlNameViewModel = new NameViewModel
+            {
+                FirstName = firstname,
+                LastName = lastname
+            };
+
+            return View(vrlNameViewModel);
         }
     }
 }
