@@ -11,7 +11,7 @@ namespace ASPMVC_Prezentacja.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(new NameViewModel());
         }
 
         [HttpPost]

@@ -1,22 +1,14 @@
 ﻿@model ASPMVC_Prezentacja.ViewModels.NameViewModel
-
 @{
-    Layout = null;
+    ViewBag.Title = "Jakis tytuł";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Post</title>
-</head>
-<body>
-    @using (Html.BeginForm("AcceptValue", "Post", FormMethod.Post))
-    {
-        <p>
-            @Html.LabelFor(c => c.FirstName)
-            @Html.TextBoxFor(c => c.FirstName)
-        </p>
+@using (Html.BeginForm("AcceptValue", "Post", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(dupa => dupa.FirstName)
+        @Html.TextBoxFor(c => c.FirstName)
+    </p>
     <p>
         @Html.LabelFor(c => c.LastName)
         @Html.TextBoxFor(c => c.LastName)
@@ -24,6 +16,4 @@
     <p>
         <input type="submit" value="Wyślij" />
     </p>
-    }
-</body>
-</html>
+}

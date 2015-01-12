@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
-namespace ASPMVC_Prezentacja.ViewModels
+﻿namespace ASPMVC_Prezentacja.ViewModels
 {
     public class NameViewModel
     {

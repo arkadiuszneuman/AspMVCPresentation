@@ -1,4 +1,17 @@
- meta
+﻿bedzie u nas wiecej aplikacji sieciowych - programowanie webowe coraz popularniejsze.
+zalety:
+- niezaleznosc od systemu (takze systemy mobilne)
+- latwosc aktualizacji oprogramowania u klienta
+minusy:
+- dostosowywanie pod przegladarki internetowe
+- wymog centralnego serwera
+
+========================================
+
+frontend i backend
+GET POST PUT DELETE
+
+=======================================
  
  public ActionResult HelloName(string name)
         {
@@ -32,6 +45,15 @@ http://localhost:62168/Home/HelloName?name=Arek
 http://localhost:62168/Home/HelloName/Arek
 =================================================
 =============================================
+
+ public class NameViewModel
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+
+=================================================
+
 
 public ActionResult HelloNameViewModel(string firstname, string lastname)
         {
@@ -116,3 +138,5 @@ http://localhost:62168/Post
 
 ===========================================================================
 ===========================================================================
+
+Projekt będzie na GitHubie
